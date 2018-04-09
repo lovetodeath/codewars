@@ -14,7 +14,6 @@ public class SquareTest {
         assertEquals("25 is a square number",   true,   Square.isSquare(25));
         assertEquals("26 isn't a square number",false,  Square.isSquare(26));
     }
-
     @Test
     public void shouldWorkForRandomSquareNumbers() throws Exception {
         System.out.println("shouldWorkForRandomSquareNumbers in");
