@@ -1,4 +1,4 @@
-package kyu_7;
+package codewars.kyu_7;
 
 import org.junit.Test;
 import java.util.Random;

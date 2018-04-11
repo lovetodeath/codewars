@@ -1,4 +1,4 @@
-package kyu_6;
+package codewars.kyu_6;
 
 /* https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/java
 
@@ -18,6 +18,6 @@ For example:
 
 public class Persist {
     public static int persistence(long n) {
-        return n;
+        return 0;
     }
 }

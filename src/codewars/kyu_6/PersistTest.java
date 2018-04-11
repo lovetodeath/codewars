@@ -1,4 +1,4 @@
-package kyu_6;
+package codewars.kyu_6;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
