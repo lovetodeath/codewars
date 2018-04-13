@@ -57,13 +57,13 @@ public class SecretMap {
         Scanner in = new Scanner(System.in);
         int n = Integer.parseInt(in.nextLine().trim());
         if(n < 1 || n > 16 ) { throw new KakaoException("n size error"); }
-        String[] strArr1 = in.nextLine().split(",");
+        String[] strArra1 = in.nextLine().split(",");
         String[] strArr2 = in.nextLine().split(",");
-        if (n != strArr1.length || n != strArr2.length) { throw new KakaoException("in data array error"); }
+        if (n != strArra1.length || n != strArr2.length) { throw new KakaoException("in data array error"); }
         int[] arr1 = new int[n];
         int[] arr2 = new int[n];
         for(int i=0; i < n; i++) {
-            arr1[i] = Integer.parseInt(strArr1[i]);
+            arr1[i] = Integer.parseInt(strArra1[i]);
             arr2[i] = Integer.parseInt(strArr2[i]);
         }
         String[] rtnMsg = calculator(n, arr1, arr2);
