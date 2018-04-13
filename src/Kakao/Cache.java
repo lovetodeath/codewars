@@ -61,9 +61,7 @@ public class Cache {
             }
             time += 5;
         }
-        for(String cacheCity : cacheList) {
-            System.out.println(cacheCity);
-        }
+        //for(String cacheCity : cacheList) System.out.println(cacheCity);
 
         System.out.println("총 실행시간 : " + time);
         return time;
