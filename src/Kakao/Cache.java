@@ -33,7 +33,7 @@ cache miss일 경우 실행시간은 5이다.
 0	[“Jeju”, “Pangyo”, “Seoul”, “NewYork”, “LA”]	25
 */
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Cache {
@@ -45,7 +45,7 @@ public class Cache {
         if(cacheSize < 0 || cacheSize > 30) throw new RuntimeException("cacheSize count error");
         if(cities.length > 100000) throw new RuntimeException("cities length error");
 
-        List<String> cacheList = new ArrayList<>();
+        List<String> cacheList = new LinkedList<>();
         int time = 0;
         Loop1 : for(String city : cities) {
             if(city.length() > 20) throw new RuntimeException("city name length error");
@@ -55,9 +55,14 @@ public class Cache {
                     continue Loop1;
                 }
             }
-            if (cacheSize != 00 && cacheList.size() >= cacheSize) cacheList = cacheList.subList(1, cacheSize);
-            cacheList.add(city);
+            if(cacheSize > 0) {
+                if (cacheList.size() >= cacheSize) cacheList = cacheList.subList(1, cacheSize);
+                cacheList.add(city);
+            }
             time += 5;
+        }
+        for(String cacheCity : cacheList) {
+            System.out.println(cacheCity);
         }
 
         System.out.println("총 실행시간 : " + time);

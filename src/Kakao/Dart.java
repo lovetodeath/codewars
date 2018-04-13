@@ -79,7 +79,6 @@ public class Dart {
             if ("*".equals(option[i])) {
                 scoreArray[i] *= 2;
                 if(i != 0) scoreArray[i-1] *= 2;
-                //scoreArray[i] = (i == 0 ? scoreArray[i]*2 : (scoreArray[i]*2) + (scoreArray[i-1]*2));
             } else if ("#".equals(option[i])) {
                 scoreArray[i] *= -1;
             }
