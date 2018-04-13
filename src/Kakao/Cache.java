@@ -52,6 +52,8 @@ public class Cache {
             for(String cacheCity : cacheList) {
                 if(city.toUpperCase().equals(cacheCity.toUpperCase())) {
                     time += 1;
+                    cacheList.remove(cacheCity);
+                    cacheList.add(cacheCity);
                     continue Loop1;
                 }
             }
